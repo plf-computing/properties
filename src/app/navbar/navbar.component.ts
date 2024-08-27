@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +9,16 @@ import { Component, ElementRef } from '@angular/core';
 })
 export class NavbarComponent {
   menuOpen = false;
+  screenSize: number;
+
+  constructor() {
+    this.screenSize = window.innerWidth;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.screenSize = event.target.innerWidth;
+  }
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;

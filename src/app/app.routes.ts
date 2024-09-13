@@ -15,14 +15,14 @@ export const routes: Routes = [
     {
         path:'home', component:HomePageComponent 
     },
-    {
-        path:'properties', component:PropertiesPageComponent
-    },
-    {
-        path:'tours', component:ToursPageComponent
-    },
-    {
-        path:'travel', component:TravelPageComponent
-    },
+    // {
+    //     path:'properties', component:PropertiesPageComponent
+    // },
+    // {
+    //     path:'tours', component:ToursPageComponent
+    // },
+    // {
+    //     path:'travel', component:TravelPageComponent
+    // },
 
 ];
